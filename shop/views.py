@@ -10,3 +10,7 @@ class ProductsViewSet(ModelViewSet):
     queryset = Products.objects.all()
     serializer_class = ProductsReadSerializer
     permission_classes = [AllowAny, ]
+
+
+def home(requests):
+    return render(requests, 'index.html')
